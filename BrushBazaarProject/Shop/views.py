@@ -23,7 +23,7 @@ def Shop(request, link=None):
         products = BrushBazaarProducts.objects.filter(category=cat.id)
     else:
         all_items = BrushBazaarProducts.objects.all()
-        paginator = Paginator(all_items, 9)
+        paginator = Paginator(all_items, 30)
         page_number = request.GET.get('page')
         products = paginator.get_page(page_number)
     return render(request, 'Shop/Shop.html', {'products': products})
