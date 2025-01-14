@@ -29,10 +29,15 @@
                   {% endfor %}
                 </ul>
               </li>
-              <li><a href="{% url 'Shop:about' %}">About</a></li>
-              <li><a href="{% url 'Shop:contact' %}">Contact</a></li>
+              {% if user.is_authenticated %}
+              <li><a href="#">View Orders</a></li>
+              <li><a href="{% url 'Customer:logout' %}">Logout</a></li>
+              {% else %}
               <li><a href="{% url 'Customer:register' %}">Register</a></li>
               <li><a href="{% url 'Customer:login' %}">Login</a></li>
+              <li><a href="{% url 'Shop:about' %}">About</a></li>
+              <li><a href="{% url 'Shop:contact' %}">Contact</a></li>
+              {% endif %}
             </ul>
           </nav>
         </div>
@@ -48,3 +53,4 @@
       </div>
     </div>
   </div>
+
