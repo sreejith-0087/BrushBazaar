@@ -9,5 +9,8 @@ urlpatterns = [
     path('contact/', Contact, name='contact'),
     path('shop/', Shop, name='shop'),
     path('category/<slug:link>', Shop, name='by_category'),
+    path('product_search/', Product_Search, name='product_search'),
+    path('single_product/<int:pro_id>/', Single_Product, name='single_product'),
+
 ]
 

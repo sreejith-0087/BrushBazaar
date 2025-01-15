@@ -1,0 +1,41 @@
+{% extends 'Home/Base.html' %}
+{% block title %} Home {% endblock %}
+{% load static %}
+{% block content %}
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="{% url 'Shop:home' %}">Home</a> <span class="mx-2 mb-0">/</span> <a
+              href="{% url 'Shop:shop' %}">Store</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">{{pro.product}}</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 mr-auto">
+            <div class="border text-center">
+              <img src="{{pro.image.url}}" alt="Image" class="img-fluid p-5">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="text-black" style="font-family: serif;">{{pro.product}}</h2>
+            <p style="font-family: serif; color: dark;">{{pro.artist}}</p>
+
+            <p style="font-family: monospace; color: #3B3050;">{{pro.description}}</p>
+
+            <p> <strong class="fa-solid fa-cart-flatbed mt-3">  <span style="color:#BB3A3E;">Stock - {{pro.stock}}</span></strong></p>
+
+            <p> <strong class="text h4" style="font-family: serif;color:#2A8737;">Rs.{{pro.price}}</strong></p>
+
+            <p><a href="#" class="buy-now btn btn-sm height-auto px-4 py-3 btn-warning">Add To Cart</a></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}

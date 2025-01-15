@@ -1,10 +1,7 @@
-from itertools import product
-
 from django.shortcuts import render, redirect
-from unicodedata import category
-
 from . models import Categories, BrushBazaarProducts
 from django.core.paginator import Paginator
+from django.db.models import Q
 # Create your views here.
 
 
@@ -29,3 +26,18 @@ def Shop(request, link=None):
     return render(request, 'Shop/Shop.html', {'products': products})
 
 
+def Product_Search(request):
+    query = request.GET.get('q')
+    if query:
+        result = BrushBazaarProducts.objects.all().filter(Q(product__icontains=query)|
+                                                    Q(category__category__icontains=query)|
+                                                    Q(artist__icontains=query))
+    else:
+        result = []
+
+    return render(request, 'Shop/Shop.html', {'products': result})
+
+
+def Single_Product(request, pro_id):
+    brushbazaarsingle = BrushBazaarProducts.objects.get(id=pro_id)
+    return render(request, 'Shop/Shop_Single.html', {'pro': brushbazaarsingle})
