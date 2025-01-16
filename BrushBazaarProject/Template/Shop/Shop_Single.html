@@ -32,10 +32,45 @@
 
             <p><a href="#" class="buy-now btn btn-sm height-auto px-4 py-3 btn-warning">Add To Cart</a></p>
 
+            <br><br>
+            <form method="post" action="{% url 'Customer:feedback' pro.id %}">
+              {% csrf_token %}
+              <label>Leave a Feedback</label>
+              <textarea name="Add_Feedback" class="form-control" required></textarea>
+              <div>
+                <input type="submit" value="Add Feedback" class="btn btn-teal-300">
+              </div>
+            </form>
+
+            <br><br>
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0 text-white">All Feedbacks</h5>
+                    </div>
+                    <div class="card-body" style="max-height: 275px; overflow-y: auto;">
+                        {% if feedback_list %}
+                            <ul class="list-group">
+                                {% for feedback in feedback_list %}
+                                    <li class="list-group-item">
+                                        <p><span style="color:#343738;">{{ feedback.user.first_name }} {{ feedback.user.last_name }}</span></span><br>
+                                        <strong style="color:black;">{{ feedback.feedback }}</strong></p>
+                                        <small class="text-muted">Posted on {{ feedback.created_at|date:"F d, Y H:i" }}</small>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p>No feedback available for this product yet.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
 
 
 {% endblock %}
+

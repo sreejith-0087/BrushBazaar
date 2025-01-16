@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from . models import Categories, BrushBazaarProducts
 from django.core.paginator import Paginator
 from django.db.models import Q
+from Customer.models import Feedback
 # Create your views here.
 
 
@@ -40,4 +41,5 @@ def Product_Search(request):
 
 def Single_Product(request, pro_id):
     brushbazaarsingle = BrushBazaarProducts.objects.get(id=pro_id)
-    return render(request, 'Shop/Shop_Single.html', {'pro': brushbazaarsingle})
+    feedback_list = Feedback.objects.filter(product=pro_id).order_by('-created_at')
+    return render(request, 'Shop/Shop_Single.html', {'pro': brushbazaarsingle, 'feedback_list': feedback_list})

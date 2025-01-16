@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from Shop.models import BrushBazaarProducts
 # Create your models here.
 
 
@@ -14,3 +15,15 @@ class CustomerDetails(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+
+
+
+class Feedback(models.Model):
+    user = models.ForeignKey(CustomerDetails, on_delete=models.CASCADE)
+    feedback = models.TextField()
+    product = models.ForeignKey(BrushBazaarProducts, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.first_name} {self.user.last_name}"
+

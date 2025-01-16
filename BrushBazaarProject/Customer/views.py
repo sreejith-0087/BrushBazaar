@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
-from .models import CustomerDetails
+from .models import CustomerDetails, Feedback
 from django.contrib.auth.decorators import login_required
+from Shop.models import BrushBazaarProducts
+
 
 # Create your views here.
 
@@ -77,3 +79,18 @@ def Logout(request):
     auth.logout(request)
     messages.error(request, 'Logout Successful')
     return redirect('Customer:login')
+
+
+@login_required(login_url='Customer:login')
+def Addfeedback(request, pro_id):
+    if request.method == 'POST':
+        fed = request.POST['Add_Feedback']
+        product = BrushBazaarProducts.objects.get(id=pro_id)
+        user = CustomerDetails.objects.get(id=request.user.id)
+        Feedback(user=user, feedback=fed, product=product).save()
+        return redirect('Shop:single_product', pro_id)
+
+
+def product_feedback_view(request, product_id):
+    feedback_list = Feedback.objects.filter(product_id=product_id).order_by('-created_at')
+    return render(request, 'Shop:single_product', {'feedback_list': feedback_list})
