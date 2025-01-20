@@ -1,3 +1,5 @@
+from itertools import product
+
 from django.shortcuts import render, redirect, get_object_or_404
 from Customer.models import CustomerDetails
 from Shop.models import BrushBazaarProducts
@@ -24,7 +26,7 @@ def Add_Cart(request, product_id):
     try:
         cart = Cart.objects.get(user=request.user.id)
     except Cart.DoesNotExist:
-        cart = Cart.objects.create(card_id=_cart_id(request), user=user)
+        cart = Cart.objects.create(cart_id=_cart_id(request), user=user)
         cart.save()
 
     try:
@@ -55,4 +57,26 @@ def Cart_Details(request, total=0, counter=0, cart_items=None):
         pass
     return render(request, 'Cart/Cart.html', dict(cart_items=cart_items, total=total, counter=counter))
 
+
+
+@login_required(login_url='Customer:login')
+def Full_Remove(request, product_id):
+    cart = Cart.objects.get(user=request.user.id)
+    product = get_object_or_404(BrushBazaarProducts, id=product_id)
+    cart_item = CartItem.objects.get(product=product, cart=cart)
+    cart_item.delete()
+    return redirect("Cart:cart_details")
+
+
+@login_required(login_url='Customer:login')
+def Cart_Remove(request, product_id):
+    cart = Cart.objects.get(user=request.user.id)
+    product = get_object_or_404(BrushBazaarProducts, id=product_id)
+    cart_item = CartItem.objects.get(product=product, cart=cart)
+    if cart_item.quantity > 1:
+        cart_item.quantity -= 1
+        cart_item.save()
+    else:
+        cart_item.delete()
+    return redirect("Cart:cart_details")
 

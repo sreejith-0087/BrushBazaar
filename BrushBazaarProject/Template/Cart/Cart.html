@@ -43,18 +43,18 @@
                     <td>
                       <div class="input-group mb-3" style="max-width: 120px;">
                         <div class="input-group-prepend">
-                          <button class="btn btn-outline-danger js-btn-minus" type="button">&minus;</button>
+                          <a href="{% url 'Cart:cart_remove' i.product.id %}"><button class="btn btn-outline-danger" type="button">&minus;</button></a>
                         </div>
                         <input type="text" class="form-control text-center" value="{{i.quantity}}" placeholder=""
                           aria-label="Example text with button addon" aria-describedby="button-addon1">
                         <div class="input-group-append">
-                          <button class="btn btn-outline-success js-btn-plus" type="button">&plus;</button>
+                          <a href="{% url 'Cart:add_cart' i.product.id %}"><button class="btn btn-outline-success" type="button">&plus;</button></a>
                         </div>
                       </div>
 
                     </td>
                     <td>Rs.{{i.sub_total}}</td>
-                    <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
+                    <td><a href="{% url 'Cart:full_remove' i.product.id %}" class="btn btn-danger height-auto btn-sm">X</a></td>
                   </tr>
                 {% endfor %}
                 </tbody>
@@ -67,7 +67,9 @@
           <div class="col-md-6">
             <div class="row mb-5">
               <div class="col-md-6">
-                <button class="btn btn-outline-primary btn-md btn-block">Continue Shopping</button>
+                <a href="{% url 'Shop:shop' %}">
+                  <button class="btn btn-outline-success btn-md btn-block">Continue Shopping</button>
+                </a>
               </div>
             </div>
           </div>
@@ -90,7 +92,7 @@
 
                 <div class="row">
                   <div class="col-md-12">
-                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='checkout.html'">Proceed To
+                    <button class="btn btn-warning btn-lg btn-block" onclick="window.location='checkout.html'">Proceed To
                       Checkout</button>
                   </div>
                 </div>
