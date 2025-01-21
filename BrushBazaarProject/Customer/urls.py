@@ -8,4 +8,6 @@ urlpatterns = [
     path('login/', Login, name='login'),
     path('logout/', Logout, name='logout'),
     path('feedback/<int:pro_id>', Addfeedback, name='feedback'),
+    path('profile/', Profile, name='profile'),
+    path('change-password/', Change_Password, name='change_password'),
 ]

@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d943c6-72fc-4862-8c1a-2b3b69ec3597" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/Checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Customer/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Customer/Change_Password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Customer/Profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/Cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/Cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Customer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Customer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Customer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Customer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Template/Home/Navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Home/Navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BrushBazaarProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,16 +51,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sreej/PycharmProjects/BrushBazaar/BrushBazaarProject/Template&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/sreej/PycharmProjects/BrushBazaar/BrushBazaarProject/Template/Customer"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sreej\PycharmProjects\BrushBazaar\BrushBazaarProject\Template\Customer" />
       <recent name="C:\Users\sreej\PycharmProjects\BrushBazaar\BrushBazaarProject\Template" />
       <recent name="C:\Users\sreej\PycharmProjects\BrushBazaar\BrushBazaarProject\Template\Home" />
       <recent name="C:\Users\sreej\PycharmProjects\BrushBazaar\BrushBazaarProject\Static" />
