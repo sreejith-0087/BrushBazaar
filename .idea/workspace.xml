@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d943c6-72fc-4862-8c1a-2b3b69ec3597" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/Checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/Cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/Cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BrushBazaarProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>

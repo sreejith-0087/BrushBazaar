@@ -80,3 +80,6 @@ def Cart_Remove(request, product_id):
         cart_item.delete()
     return redirect("Cart:cart_details")
 
+
+def Checkout(request):
+    return render(request, 'Cart/Checkout.html')
