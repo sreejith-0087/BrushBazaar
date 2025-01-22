@@ -129,3 +129,4 @@ def Change_Password(request):
         form = CustomPasswordChangeForm(user=request.user)
 
     return render(request, 'Customer/Change_Password.html', {'form': form})
+

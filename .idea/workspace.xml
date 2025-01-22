@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d943c6-72fc-4862-8c1a-2b3b69ec3597" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Customer/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Customer/Change_Password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Customer/Profile.html" afterDir="false" />
+    <list default="true" id="46d943c6-72fc-4862-8c1a-2b3b69ec3597" name="Changes" comment="Create Profile &amp; Change pwd">
+      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/ThankYou.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Customer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Customer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Customer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Customer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Template/Home/Navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Home/Navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/Checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BrushBazaarProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,13 +55,13 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/sreej/PycharmProjects/BrushBazaar/BrushBazaarProject/Template/Customer"
+    "last_opened_file_path": "C:/Users/sreej/PycharmProjects/BrushBazaar/BrushBazaarProject/Template"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sreej\PycharmProjects\BrushBazaar\BrushBazaarProject\Template\Customer" />
       <recent name="C:\Users\sreej\PycharmProjects\BrushBazaar\BrushBazaarProject\Template" />
+      <recent name="C:\Users\sreej\PycharmProjects\BrushBazaar\BrushBazaarProject\Template\Customer" />
       <recent name="C:\Users\sreej\PycharmProjects\BrushBazaar\BrushBazaarProject\Template\Home" />
       <recent name="C:\Users\sreej\PycharmProjects\BrushBazaar\BrushBazaarProject\Static" />
     </key>
@@ -83,6 +82,15 @@
       <option name="presentableId" value="Default" />
       <updated>1736394774411</updated>
     </task>
+    <task id="LOCAL-00001" summary="Create Profile &amp; Change pwd">
+      <option name="closed" value="true" />
+      <created>1737469602425</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737469602425</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,5 +103,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create Profile &amp; Change pwd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Profile &amp; Change pwd" />
   </component>
 </project>
