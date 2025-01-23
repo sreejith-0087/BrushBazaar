@@ -3,9 +3,11 @@ from Customer.models import CustomerDetails
 from Shop.models import BrushBazaarProducts
 from .models import *
 from django.http import HttpResponseNotAllowed
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.core.exceptions import ObjectDoesNotExist
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
+
 # Create your views here.
 
 
@@ -124,6 +126,60 @@ def PlaceOrder(request):
         if type == '1':
             return render(request, 'Cart/ThankYou.html')
         else:
-            return redirect('', order.id)
+            return redirect('Cart:card_payment', order.id)
 
     return HttpResponseNotAllowed(['POST'])
+
+
+@login_required(login_url='Customer:login')
+def Card_Payment(request, order_id):
+    if request.method == 'POST':
+        card_number = request.POST.get('card_number')
+        name = request.POST.get('card_name')
+        expiry_month = request.POST.get('expiry_month')
+        expiry_year = request.POST.get('expiry_year')
+        cvv = request.POST.get('cvv')
+
+        user_detail = CustomerDetails.objects.get(id=request.user.id)
+        order = Order.objects.get(id=order_id)
+
+        pay = Payment(
+            user=user_detail,
+            order=order,
+            card_number=card_number,
+            name=name,
+            expiry_Month=expiry_month,
+            expiry_year=expiry_year,
+            cvv=cvv
+        )
+        pay.save()
+
+        order.payment_status = True
+        order.save()
+
+        return render(request, 'Cart/ThankYou.html')
+    return render(request, 'Cart/Card_Payment.html')
+
+
+@login_required(login_url='Customer:login')
+def Order_View(request):
+    cod_order = Order.objects.filter(user=request.user.id)
+    order_products = ProductOrder.objects.filter(order__in=cod_order).order_by('-order__date_time')
+    paginator = Paginator(order_products, 6)
+    page = request.GET.get('page')
+
+    try:
+        order_items = paginator.page(page)
+    except EmptyPage:
+        order_items = paginator.page(paginator.num_pages)
+    except PageNotAnInteger:
+        order_items = paginator.page(1)
+
+    return render(request, 'Cart/View_Order.html', {'order_items': order_items})
+
+
+
+
+
+
+

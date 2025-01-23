@@ -1,0 +1,35 @@
+{% extends 'Home/Base.html' %}
+{% block title %} Order View {% endblock %}
+{% load static %}
+{% block content %}
+
+    <div id="confirmation-container">
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <h2 class="btn btn-success px-3 py-3">Your Order Details</h2>
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Date & Time</th>
+                <th>Payment Mode</th>
+                <th>Address</th>
+                <th>Online <br> Payment Status</th>
+                <th>Delivery Status</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+
+{% endblock %}
