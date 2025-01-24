@@ -178,8 +178,3 @@ def Order_View(request):
     return render(request, 'Cart/View_Order.html', {'order_items': order_items})
 
 
-
-
-
-
-

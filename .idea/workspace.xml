@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d943c6-72fc-4862-8c1a-2b3b69ec3597" name="Changes" comment="Setting Placeorder">
-      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/Card_Payment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/View_Order.html" afterDir="false" />
+    <list default="true" id="46d943c6-72fc-4862-8c1a-2b3b69ec3597" name="Changes" comment="Card Payment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Template/Home/Navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Home/Navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/View_Order.html" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Cart/View_Order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BrushBazaarProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737522816041</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Card Payment">
+      <option name="closed" value="true" />
+      <created>1737610346342</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737610346342</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create Profile &amp; Change pwd" />
     <MESSAGE value="Setting Placeorder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setting Placeorder" />
+    <MESSAGE value="Card Payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Card Payment" />
   </component>
 </project>
