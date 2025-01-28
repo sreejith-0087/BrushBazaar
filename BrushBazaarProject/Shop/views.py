@@ -1,3 +1,5 @@
+from itertools import product
+
 from django.shortcuts import render, redirect
 from . models import Categories, BrushBazaarProducts
 from django.core.paginator import Paginator
@@ -7,7 +9,9 @@ from Customer.models import Feedback
 
 
 def Home(request):
-    return render(request, 'Home/Index.html')
+    products = BrushBazaarProducts.objects.all()
+    product = products[:3]
+    return render(request, 'Home/Index.html', {'product': product})
 
 def About(request):
     return render(request, 'Home/About.html')

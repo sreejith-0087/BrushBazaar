@@ -13,13 +13,15 @@
       <div class="d-flex align-items-center justify-content-between">
         <div class="logo">
           <div class="site-logo">
-            <a href="{% url 'Shop:home' %}" class="js-logo-clone">BrushBazaar</a>
+            <a href="{% url 'Shop:home' %}" class="js-logo-clone">
+              <span style="color:#599095;">BrushBazaar</span>
+            </a>
           </div>
         </div>
         <div class="main-nav d-none d-lg-block">
           <nav class="site-navigation text-right text-md-center" role="navigation">
             <ul class="site-menu js-clone-nav d-none d-lg-block">
-              <li class="active"><a href="{% url 'Shop:home' %}">Home</a></li>
+              <li><a href="{% url 'Shop:home' %}">Home</a></li>
               <li><a href="{% url 'Shop:shop' %}">Store</a></li>
               <li class="has-children">
                 <a href="#">Category</a>
