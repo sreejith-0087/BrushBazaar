@@ -36,7 +36,11 @@
                             </div>
                         </div>
                         <p class="fa-solid fa-cart-flatbed mt-3">
+                            {% if i.stock > 0 %}
                             <span style="color: #BB3A3E;">Stock - {{i.stock}}</span>
+                            {% else %}
+                            <span style="color: #BB3A3E;">Out of Stock</span>
+                            {% endif %}
                         </p>
                     </div>
                 </div>

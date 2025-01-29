@@ -26,11 +26,21 @@
 
             <p style="font-family: monospace; color: #3B3050;">{{pro.description}}</p>
 
-            <p> <strong class="fa-solid fa-cart-flatbed mt-3">  <span style="color:#BB3A3E;">Stock - {{pro.stock}}</span></strong></p>
+            <p>
+                {% if pro.stock > 0 %}
+                <strong class="fa-solid fa-cart-flatbed mt-3">
+                <span style="color:#BB3A3E;">Stock - {{pro.stock}}</span>
+                </strong>
+                {% endif %}
+            </p>
 
             <p> <strong class="text h4" style="font-family: serif;color:#2A8737;">Rs.{{pro.price}}</strong></p>
 
+            {% if pro.stock > 0 %}
             <p><a href="{% url 'Cart:add_cart' pro.id %}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-warning">Add To Cart</a></p>
+            {% else %}
+            <p><button class="buy-now btn btn-sm height-auto px-4 py-3 btn-dark">Out of Stock</button></p>
+            {% endif %}
 
             <br><br>
             <form method="post" action="{% url 'Customer:feedback' pro.id %}">

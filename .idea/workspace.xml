@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d943c6-72fc-4862-8c1a-2b3b69ec3597" name="Changes" comment="Order View &amp; Delivery Status">
+    <list default="true" id="46d943c6-72fc-4862-8c1a-2b3b69ec3597" name="Changes" comment="Index Setting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Template/Shop/Shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Shop/Shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/Template/Shop/Shop_Single.html" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/Template/Shop/Shop_Single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrushBazaarProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BrushBazaarProject/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737696080593</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Index Setting">
+      <option name="closed" value="true" />
+      <created>1738037971118</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738037971118</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +138,7 @@
     <MESSAGE value="Setting Placeorder" />
     <MESSAGE value="Card Payment" />
     <MESSAGE value="Order View &amp; Delivery Status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order View &amp; Delivery Status" />
+    <MESSAGE value="Index Setting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Index Setting" />
   </component>
 </project>
